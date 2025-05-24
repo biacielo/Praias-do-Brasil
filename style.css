@@ -1,0 +1,177 @@
+/* A estrutura do css é composta: pela identificação do elemneto seguido de chaves, por último dentro das chaves você escolhe o atributo que deseja modificar seguido do parâmetro. 
+Exemplo: 
+    p{font-sinze:16px; (alterar tamanho)
+    color: red; }       (alterar cor)
+SEMPRE PONHA VÍRGULA */
+/*Medidas absolutas (fixas): 
+px- pixels.
+cm- centimetros.
+mm- milimetros.
+Medidas relativs (se ajustam):
+rem- se ajusta de acordo com o tamanho da fonte html.
+%- relativo ao tamanho do elemento pai/tela.
+
+
+Definir "id", somente um, VOCÊ DEVE COLOCAR O '#' ANTES, NA CLASS É '.' ANTES;
+
+PARA COR: Podemos usar no Gradiente: "top, left,rigth e botton.
+
+
+*/
+
+
+.carousel-indicators{
+    background-color:#1a616700;
+}
+#carrossel4-Slides{
+    width: 80%;
+}
+.ferias{
+    
+    width: 40%; /*alterando a largura da img.*/
+    
+    height: 40%;/*alterando a altura da img.*/
+}
+
+.Menu_h{
+    display: flex;/* alinar os itens horizontamente*/
+    justify-content: space-around; /*distribui o espaçamento de forma linear (igual) entre eles*/
+    background-color: rgb(148, 186, 209); /*cor de fundo do menu*/
+    padding: 10px;/* o espaço interno padrão dos elementos da lista*/
+
+    width: 100%;
+    z-index: 1000;/*garante a sobreposição*/
+    border-top: 1px solid rgb(0, 0, 0);/*linha separadora entre os itens - aplica borda superior aos elementos*/
+
+}
+.Menu_h a{
+    text-decoration: none ;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    transition: transform 0.5s ease;
+
+}
+
+img{
+
+ width: 30%; /*alterando a largura da img.*/
+ max-width: 600px;  /*Máximo de largura*/
+ height: auto; /*Manter a proporção.*/
+ border-radius: 10px; /*Bordas arredondadas*/
+ margin: 10px 0px; /*espaçamento entre a img e o conteúdo*/
+
+}
+/*Efeito hover nos links*/
+a:hover{
+    text-decoration:underline ; /*add um traço abaixo do link quando o mouse estiver sobre ele*/
+   
+}
+tr,td{
+    border-color: black ;
+    border: 1px solid;
+}
+
+td{
+    width: 200px;
+}
+
+.linha1{
+    background-color: orange;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+body{
+    background-image: linear-gradient(to bottom,  hsl(0, 0%, 100%),#85eff8);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    line-height: 1.1; /*Espaçamento de linhas*/
+    padding: 70px; /*Espaçamento interno nas Bordas*/
+}
+h1{
+    text-align: center; /*centraliza o texto*/
+    color:#1d66f7;
+    font-size: 2rem;
+    margin-bottom: 30px; /*Espaçamento abaixo do título*/
+}
+h2,h3{
+    color:#1a6067;
+    margin-top: 20px; /*Espaço superior entre as seções*/
+}
+a{
+    color: #1a6067;
+    text-decoration: none; /*link sem o urdelin*/
+}
+p{
+    font-size: 15px;
+    
+}
+ul,ol{
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: rgb(219, 248, 243);
+    padding: 30px;
+}
+table{
+    width: 100%; /*Ocupa 100% de largura do elemento ao qual ela erá inserida*/
+    border-collapse: collapse;/*Juntar as bordas da tabela*/
+    margin-top: 20px;/*espaço acima da tabela*/
+}
+table td{
+    border: 2px solid rgb(0, 0, 0); /*borda de 1 px de largura contínua e cor preta*/
+    text-align: center;
+    background-color: #ffeda3;
+    padding: 12px;
+}
+/*Estilizando os cards, pela class no caso "cards"*/
+.card{
+    background-color: aliceblue;/*cor de fundo*/
+    border-radius: 10px; /*Bordas arredondadas*/
+     margin: 20px auto; /*espaçamento entre a img e o conteúdo*/
+    overflow: hidden;/*Ocultar o que passar dos limite do card*/
+    display: inline-block; /*coloca os cards lado a lado*/
+    vertical-align: top;/*alinha os cards*/
+    height: 614px;/*defina a altura dos cards*/
+    transition: transform 0.3s ease;/*animação na interação entre os cards*/
+}
+.card:hover{
+    transform: scale(1.03);/*aumeto em 3% o tamanho do card*/
+}
+/*estilização dos títulos dos cards*/
+.card-title{
+    font-size: 1.0rem;
+    color: #1a6067;
+    margin-bottom: 10px;/*espaço abaixo do titulo*/
+    margin-left: 10px;/*espaço à esquerda do titulo*/
+    text-align: center; /*centraliza o texto*/
+}
+/*estilizar parágrafo*/
+.card-text{
+    margin-left: 10px;
+    color: #444;
+}
+/*ajustando a img*/
+.card-img-top{
+    width: 30%;
+    height: 20%;
+}
+.btn-primary{
+    background-color: #1a6067;
+    color: #ffffff;
+    padding: 10px 16px;
+    text-align: center;
+    border-radius: 8px;
+    margin-left: 40px;
+    
+}
+.btn-primary:hover{
+    background-color: #1a6067;
+    text-decoration: none;
+}
+
+@media(max-width:768px){
+    .card{
+        width: 90%;
+        margin: 20px auto;
+    }
+}
